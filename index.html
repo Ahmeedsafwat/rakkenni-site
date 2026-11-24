@@ -12,42 +12,72 @@
 <style>
 body{margin:0;background:#F6F5F1}
 a{color:#0B6E63}a:hover{color:#10231F}
-input,select,textarea{font:inherit}
+input,select,textarea{font:inherit;font-size:16px}
+.mnav{display:none}
+@media (max-width:720px){
+.nl{display:none}.mnav{display:block}
+.mainnav{gap:8px!important}
+.sec{padding-top:56px!important;padding-bottom:56px!important;padding-left:20px!important;padding-right:20px!important}
+.hero{padding:28px 20px 56px!important;gap:36px!important}
+.cta-row a{flex:1 1 100%;text-align:center}
+.phone{width:270px!important;height:auto!important}
+.card-pad{padding:22px!important}
+.chips{flex-wrap:nowrap!important;overflow-x:auto;padding-bottom:6px;scrollbar-width:none}
+.chips span{flex:0 0 auto}
+.statuses{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))}
+.statuses p{padding:14px!important;font-size:15px!important}
+.dash-grid{grid-template-columns:minmax(0,1fr)!important}
+}
+@media (max-width:400px){.logo-ar{display:none}}
 </style>
-<style>html{scroll-behavior:smooth}</style>
+<style>html{scroll-behavior:smooth;scroll-padding-top:72px}summary::-webkit-details-marker{display:none}</style>
 </head>
 <body>
 <div style="font-family: Inter, sans-serif; color: #10231F; background: #F6F5F1">
 
-  <header style="max-width: 1200px; margin: 0 auto; padding: 20px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+  <header style="position: sticky; top: 0; z-index: 20; background: #F6F5F1; border-bottom: 1px solid #E2DFD6">
+  <div style="max-width: 1200px; margin: 0 auto; padding: 12px 20px; display: flex; align-items: center; justify-content: space-between; gap: 12px">
     <a href="#top" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #10231F">
       <svg width="36" height="36" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 3C18.7 3 8 13.5 8 26.6 8 44 32 61 32 61S56 44 56 26.6C56 13.5 45.3 3 32 3Z" fill="#0B6E63"/><rect x="21" y="13" width="3.2" height="25" rx="1.6" fill="#FFFFFF"/><rect x="39.8" y="13" width="3.2" height="25" rx="1.6" fill="#FFFFFF"/><rect x="26.6" y="17" width="10.8" height="16" rx="4" fill="#F2A541"/></svg>
-      <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 24px; letter-spacing: -0.5px">rakkenni</span>
-      <span dir="rtl" style="font-family: Cairo, sans-serif; font-weight: 800; font-size: 22px; color: #0B6E63">ركّني</span>
+      <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 22px; letter-spacing: -0.5px">rakkenni</span>
+      <span class="logo-ar" dir="rtl" style="font-family: Cairo, sans-serif; font-weight: 800; font-size: 20px; color: #0B6E63">ركّني</span>
     </a>
-    <nav aria-label="Main" style="display: flex; flex-wrap: wrap; align-items: center; gap: 22px; font-size: 15px; font-weight: 600">
-      <a href="#ways" style="color: #10231F; text-decoration: none">How it works</a>
-      <a href="#owners" style="color: #10231F; text-decoration: none">For owners</a>
-      <a href="#cities" style="color: #10231F; text-decoration: none">For cities</a>
-      <a href="#contact" style="color: #10231F; text-decoration: none">Contact</a>
-      <a href="https://parkapp-egypt.expo.app" style="padding: 12px 20px; border-radius: 12px; background: #0B6E63; color: #FFFFFF; text-decoration: none">Try the app</a>
+    <nav class="mainnav" aria-label="Main" style="display: flex; align-items: center; gap: 22px; font-size: 15px; font-weight: 600">
+      <a class="nl" href="#ways" style="color: #10231F; text-decoration: none; padding: 12px 0">How it works</a>
+      <a class="nl" href="#owners" style="color: #10231F; text-decoration: none; padding: 12px 0">For owners</a>
+      <a class="nl" href="#cities" style="color: #10231F; text-decoration: none; padding: 12px 0">For cities</a>
+      <a class="nl" href="#contact" style="color: #10231F; text-decoration: none; padding: 12px 0">Contact</a>
+      <a href="https://parkapp-egypt.expo.app" style="padding: 12px 16px; border-radius: 12px; background: #0B6E63; color: #FFFFFF; text-decoration: none; white-space: nowrap">Try the app</a>
+      <details class="mnav" style="position: relative">
+        <summary aria-label="Menu" style="list-style: none; cursor: pointer; width: 44px; height: 44px; box-sizing: border-box; border-radius: 12px; border: 1px solid #C9C5BB; display: flex; align-items: center; justify-content: center">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10231F" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </summary>
+        <div style="position: absolute; right: 0; top: 52px; width: 220px; border-radius: 16px; background: #FFFFFF; border: 1px solid #D9D6CE; padding: 8px; display: flex; flex-direction: column; box-shadow: 0 8px 24px rgba(16,35,31,0.12)">
+          <a href="#ways" style="padding: 14px 12px; color: #10231F; text-decoration: none">How it works</a>
+          <a href="#owners" style="padding: 14px 12px; color: #10231F; text-decoration: none">For owners</a>
+          <a href="#attendants" style="padding: 14px 12px; color: #10231F; text-decoration: none">For attendants</a>
+          <a href="#cities" style="padding: 14px 12px; color: #10231F; text-decoration: none">For cities</a>
+          <a href="#contact" style="padding: 14px 12px; color: #10231F; text-decoration: none">Contact</a>
+        </div>
+      </details>
     </nav>
+  </div>
   </header>
 
-  <section id="top" style="max-width: 1200px; margin: 0 auto; padding: 48px 24px 88px; display: flex; flex-wrap: wrap; align-items: center; gap: 56px">
+  <section id="top" class="hero" style="max-width: 1200px; margin: 0 auto; padding: 48px 24px 88px; display: flex; flex-wrap: wrap; align-items: center; gap: 56px">
     <div style="flex: 999 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
       <p style="margin: 0; align-self: flex-start; padding: 6px 14px; border-radius: 999px; background: #F2A541; font-size: 14px; font-weight: 600">Garages, malls and street parking in Egypt</p>
       <h1 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: clamp(44px, 6vw, 76px); line-height: 1.02; letter-spacing: -2px">Park it. Pay from your phone.</h1>
       <p dir="rtl" style="margin: 0; font-family: Cairo, sans-serif; font-weight: 800; font-size: clamp(32px, 4vw, 48px); line-height: 1.3; color: #0B6E63; text-align: left">ركّني.. وادفع من موبايلك</p>
       <p style="margin: 0; max-width: 580px; font-size: 19px; line-height: 1.55; color: #4A5260">Book a spot ahead in garages, malls, airports and event venues, or park right now in a street zone. Pay by card, mobile wallet or cash, and extend your time from anywhere.</p>
-      <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px">
+      <div class="cta-row" style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px">
         <a href="https://parkapp-egypt.expo.app" style="padding: 16px 26px; border-radius: 14px; background: #0B6E63; color: #FFFFFF; font-weight: 600; font-size: 16px; text-decoration: none">Try the app</a>
         <a href="#cities" style="padding: 16px 26px; border-radius: 14px; background: #FFFFFF; border: 1px solid #C9C5BB; color: #10231F; font-weight: 600; font-size: 16px; text-decoration: none">For cities and operators</a>
       </div>
       <p style="margin: 0; font-size: 14px; color: #4A5260">Available in Arabic and English · Test mode: no real money is charged yet</p>
     </div>
     <div style="flex: 1 1 300px; display: flex; justify-content: center">
-      <div style="width: 300px; height: 600px; border-radius: 46px; background: #10231F; box-sizing: border-box; padding: 12px">
+      <div class="phone" style="width: 300px; height: 600px; border-radius: 46px; background: #10231F; box-sizing: border-box; padding: 12px">
         <div style="height: 100%; border-radius: 36px; background: #F6F5F1; box-sizing: border-box; padding: 26px 18px; display: flex; flex-direction: column; gap: 14px; overflow: hidden">
           <p style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 20px">rakkenni</p>
           <div style="border-radius: 20px; background: #0B6E63; color: #FFFFFF; padding: 18px; display: flex; flex-direction: column; gap: 6px">
@@ -74,14 +104,14 @@ input,select,textarea{font:inherit}
     </div>
   </section>
 
-  <section id="ways" style="background: #FFFFFF; padding: 88px 24px">
+  <section id="ways" class="sec" style="background: #FFFFFF; padding: 88px 24px">
     <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 36px">
       <div style="display: flex; flex-direction: column; gap: 8px">
         <h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: clamp(32px, 4vw, 48px); letter-spacing: -1px">Two ways to park</h2>
         <p dir="rtl" style="margin: 0; font-family: Cairo, sans-serif; font-weight: 800; font-size: 28px; color: #0B6E63; text-align: left">احجز مكانك أو اركن دلوقتي</p>
       </div>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px">
-        <div style="border-radius: 24px; background: #F6F5F1; padding: 32px; display: flex; flex-direction: column; gap: 14px">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 20px">
+        <div class="card-pad" style="border-radius: 24px; background: #F6F5F1; padding: 32px; display: flex; flex-direction: column; gap: 14px">
           <p style="margin: 0; align-self: flex-start; padding: 5px 12px; border-radius: 999px; background: #0B6E63; color: #FFFFFF; font-size: 13px; font-weight: 600">Book ahead</p>
           <h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 28px; letter-spacing: -0.5px">Garages, malls, airports and events</h3>
           <p style="margin: 0; font-size: 17px; line-height: 1.55; color: #4A5260">Search an address, venue or airport, choose your arrival and departure, and compare places on a map or a list by distance, price and rating.</p>
@@ -93,7 +123,7 @@ input,select,textarea{font:inherit}
           </ol>
           <p style="margin: 0; font-size: 15px; color: #4A5260">Free cancellation up to one hour before arrival.</p>
         </div>
-        <div style="border-radius: 24px; background: #10231F; color: #FFFFFF; padding: 32px; display: flex; flex-direction: column; gap: 14px">
+        <div class="card-pad" style="border-radius: 24px; background: #10231F; color: #FFFFFF; padding: 32px; display: flex; flex-direction: column; gap: 14px">
           <p style="margin: 0; align-self: flex-start; padding: 5px 12px; border-radius: 999px; background: #F2A541; color: #10231F; font-size: 13px; font-weight: 600">Park now · اركن دلوقتي</p>
           <h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 28px; letter-spacing: -0.5px">Street zones, no booking needed</h3>
           <p style="margin: 0; font-size: 17px; line-height: 1.55; color: #C9D3D0">Every street zone has a sign with a short code. Park, type the code, and you are covered for as long as you pay.</p>
@@ -106,40 +136,40 @@ input,select,textarea{font:inherit}
           <p style="margin: 0; font-size: 15px; color: #C9D3D0">Outside paid hours, street parking is free.</p>
         </div>
       </div>
-      <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px">
-        <p style="margin: 0 6px 0 0; font-size: 15px; font-weight: 600">Popular places:</p>
-        <span style="padding: 8px 14px; border-radius: 999px; background: #F6F5F1; font-size: 14px">Cairo International Stadium</span>
-        <span style="padding: 8px 14px; border-radius: 999px; background: #F6F5F1; font-size: 14px">Cairo Opera House</span>
-        <span style="padding: 8px 14px; border-radius: 999px; background: #F6F5F1; font-size: 14px">Grand Egyptian Museum</span>
-        <span style="padding: 8px 14px; border-radius: 999px; background: #F6F5F1; font-size: 14px">Egypt International Exhibition Center</span>
-        <span style="padding: 8px 14px; border-radius: 999px; background: #F6F5F1; font-size: 14px">Cairo Airport</span>
-        <span style="padding: 8px 14px; border-radius: 999px; background: #F6F5F1; font-size: 14px">Sphinx Airport</span>
+      <p style="margin: 0; font-size: 15px; font-weight: 600">Popular places</p>
+      <div class="chips" style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: -24px">
+        <span style="padding: 10px 14px; border-radius: 999px; background: #F6F5F1; font-size: 14px; white-space: nowrap">Cairo International Stadium</span>
+        <span style="padding: 10px 14px; border-radius: 999px; background: #F6F5F1; font-size: 14px; white-space: nowrap">Cairo Opera House</span>
+        <span style="padding: 10px 14px; border-radius: 999px; background: #F6F5F1; font-size: 14px; white-space: nowrap">Grand Egyptian Museum</span>
+        <span style="padding: 10px 14px; border-radius: 999px; background: #F6F5F1; font-size: 14px; white-space: nowrap">Egypt International Exhibition Center</span>
+        <span style="padding: 10px 14px; border-radius: 999px; background: #F6F5F1; font-size: 14px; white-space: nowrap">Cairo Airport</span>
+        <span style="padding: 10px 14px; border-radius: 999px; background: #F6F5F1; font-size: 14px; white-space: nowrap">Sphinx Airport</span>
       </div>
     </div>
   </section>
 
-  <section style="padding: 88px 24px">
-    <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px">
-      <div style="border-radius: 20px; background: #FFFFFF; border: 1px solid #D9D6CE; padding: 26px; display: flex; flex-direction: column; gap: 10px">
+  <section class="sec" style="padding: 88px 24px">
+    <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 14px">
+      <div style="border-radius: 20px; background: #FFFFFF; border: 1px solid #D9D6CE; padding: 22px; display: flex; flex-direction: column; gap: 8px">
         <h3 style="margin: 0; font-size: 20px">Pay your way</h3>
         <p style="margin: 0; font-size: 16px; line-height: 1.55; color: #4A5260">Visa, Mastercard or Meeza through Paymob's secure page. Vodafone Cash, Orange Cash, Etisalat Cash or WE Pay. Or get a reference number and pay cash at Fawry or Aman.</p>
       </div>
-      <div style="border-radius: 20px; background: #FFFFFF; border: 1px solid #D9D6CE; padding: 26px; display: flex; flex-direction: column; gap: 10px">
+      <div style="border-radius: 20px; background: #FFFFFF; border: 1px solid #D9D6CE; padding: 22px; display: flex; flex-direction: column; gap: 8px">
         <h3 style="margin: 0; font-size: 20px">Clear prices</h3>
         <p style="margin: 0; font-size: 16px; line-height: 1.55; color: #4A5260">See the full price before you pay: parking time, a small service fee on bookings, and VAT included. No haggling with anyone on the street.</p>
       </div>
-      <div style="border-radius: 20px; background: #FFFFFF; border: 1px solid #D9D6CE; padding: 26px; display: flex; flex-direction: column; gap: 10px">
+      <div style="border-radius: 20px; background: #FFFFFF; border: 1px solid #D9D6CE; padding: 22px; display: flex; flex-direction: column; gap: 8px">
         <h3 style="margin: 0; font-size: 20px">Your cars, your plates</h3>
         <p style="margin: 0; font-size: 16px; line-height: 1.55; color: #4A5260">Add your cars with an Egyptian plate keyboard in Arabic letters and numbers. Switch cars in one tap when you book or park.</p>
       </div>
-      <div style="border-radius: 20px; background: #FFFFFF; border: 1px solid #D9D6CE; padding: 26px; display: flex; flex-direction: column; gap: 10px">
+      <div style="border-radius: 20px; background: #FFFFFF; border: 1px solid #D9D6CE; padding: 22px; display: flex; flex-direction: column; gap: 8px">
         <h3 style="margin: 0; font-size: 20px">Saved places</h3>
         <p style="margin: 0; font-size: 16px; line-height: 1.55; color: #4A5260">Save your work address and favourite places, and see your upcoming and past bookings in one place.</p>
       </div>
     </div>
   </section>
 
-  <section id="owners" style="background: #FFFFFF; padding: 88px 24px">
+  <section id="owners" class="sec" style="background: #FFFFFF; padding: 88px 24px">
     <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 56px">
       <div style="flex: 999 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
         <p style="margin: 0; font-size: 14px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: #0B6E63">For garage and space owners</p>
@@ -154,8 +184,8 @@ input,select,textarea{font:inherit}
         </ul>
         <a href="#contact" style="align-self: flex-start; margin-top: 6px; padding: 14px 22px; border-radius: 14px; background: #0B6E63; color: #FFFFFF; font-weight: 600; text-decoration: none">List your space</a>
       </div>
-      <div style="flex: 1 1 340px; display: flex; justify-content: center">
-        <div style="width: 340px; border-radius: 24px; background: #0B6E63; color: #FFFFFF; padding: 22px; box-sizing: border-box; display: flex; flex-direction: column; gap: 14px">
+      <div style="flex: 1 1 300px; min-width: 0; display: flex; justify-content: center">
+        <div style="width: 100%; max-width: 340px; border-radius: 24px; background: #0B6E63; color: #FFFFFF; padding: 22px; box-sizing: border-box; display: flex; flex-direction: column; gap: 14px">
           <div style="display: flex; align-items: center; justify-content: space-between">
             <p style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 20px">rakkenni</p>
             <p dir="rtl" style="margin: 0; font-family: Cairo, sans-serif; font-weight: 800; font-size: 20px">ركّني</p>
@@ -182,7 +212,7 @@ input,select,textarea{font:inherit}
     </div>
   </section>
 
-  <section id="attendants" style="background: #0B6E63; color: #FFFFFF; padding: 88px 24px">
+  <section id="attendants" class="sec" style="background: #0B6E63; color: #FFFFFF; padding: 88px 24px">
     <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 40px; align-items: center">
       <div style="flex: 999 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 14px">
         <p style="margin: 0; font-size: 14px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: #F2A541">For attendants</p>
@@ -190,16 +220,16 @@ input,select,textarea{font:inherit}
         <p dir="rtl" style="margin: 0; font-family: Cairo, sans-serif; font-weight: 800; font-size: 28px; color: #F2A541; text-align: left">سايس ركّني المعتمد</p>
         <p style="margin: 0; font-size: 18px; line-height: 1.55">Registered attendants pick their zone, check any car by plate number and see its status at a glance. When a driver pays cash, the attendant adds it straight into the driver's session, so every pound is recorded.</p>
       </div>
-      <div style="flex: 1 1 320px; display: flex; flex-direction: column; gap: 10px">
-        <p style="margin: 0; padding: 16px 20px; border-radius: 16px; background: #1E7A4F; font-size: 17px; font-weight: 600">Paid · مدفوع</p>
-        <p style="margin: 0; padding: 16px 20px; border-radius: 16px; background: #F2A541; color: #10231F; font-size: 17px; font-weight: 600">Ending soon · قرب يخلص</p>
-        <p style="margin: 0; padding: 16px 20px; border-radius: 16px; background: #B42318; font-size: 17px; font-weight: 600">Expired · منتهي</p>
-        <p style="margin: 0; padding: 16px 20px; border-radius: 16px; background: #10231F; font-size: 17px; font-weight: 600">Not found · غير موجود</p>
+      <div class="statuses" style="flex: 1 1 300px; display: flex; flex-direction: column; gap: 10px">
+        <p style="margin: 0; padding: 16px 20px; border-radius: 16px; background: #1E7A4F; font-size: 17px; font-weight: 600">Paid<span dir="rtl" style="display: block; font-family: Cairo, sans-serif; font-weight: 600; font-size: 15px; margin-top: 2px; text-align: left">مدفوع</span></p>
+        <p style="margin: 0; padding: 16px 20px; border-radius: 16px; background: #F2A541; color: #10231F; font-size: 17px; font-weight: 600">Ending soon<span dir="rtl" style="display: block; font-family: Cairo, sans-serif; font-weight: 600; font-size: 15px; margin-top: 2px; text-align: left">قرب يخلص</span></p>
+        <p style="margin: 0; padding: 16px 20px; border-radius: 16px; background: #B42318; font-size: 17px; font-weight: 600">Expired<span dir="rtl" style="display: block; font-family: Cairo, sans-serif; font-weight: 600; font-size: 15px; margin-top: 2px; text-align: left">منتهي</span></p>
+        <p style="margin: 0; padding: 16px 20px; border-radius: 16px; background: #10231F; font-size: 17px; font-weight: 600">Not found<span dir="rtl" style="display: block; font-family: Cairo, sans-serif; font-weight: 600; font-size: 15px; margin-top: 2px; text-align: left">غير موجود</span></p>
       </div>
     </div>
   </section>
 
-  <section id="cities" style="padding: 88px 24px">
+  <section id="cities" class="sec" style="padding: 88px 24px">
     <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 56px">
       <div style="flex: 999 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
         <p style="margin: 0; font-size: 14px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: #0B6E63">For cities and parking operators</p>
@@ -213,12 +243,12 @@ input,select,textarea{font:inherit}
         </ul>
         <p style="margin: 0; font-size: 15px; color: #4A5260">Demo zones in the app today: Nasr City (Abbas El Akkad, Makram Ebeid, Mostafa El Nahas, Youssef Abbas) and Heliopolis (Korba, El Merghany, Roxy, El Hegaz).</p>
       </div>
-      <div style="flex: 1 1 420px; min-width: 0; border-radius: 24px; background: #10231F; color: #FFFFFF; padding: 24px; display: flex; flex-direction: column; gap: 14px">
+      <div style="flex: 1 1 420px; min-width: 0; border-radius: 24px; background: #10231F; color: #FFFFFF; padding: 20px; display: flex; flex-direction: column; gap: 14px">
         <div style="display: flex; justify-content: space-between; align-items: center">
           <p style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 20px">Authority dashboard</p>
           <p style="margin: 0; padding: 4px 10px; border-radius: 999px; background: #F2A541; color: #10231F; font-size: 12px; font-weight: 600">Demo data</p>
         </div>
-        <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px">
+        <div class="dash-grid" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px">
           <div style="border-radius: 14px; background: #1C3631; padding: 14px">
             <p style="margin: 0; font-size: 13px; color: #B8C4C0">Revenue this month</p>
             <p style="margin: 6px 0 0; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 24px">6,958.50 EGP</p>
@@ -242,12 +272,12 @@ input,select,textarea{font:inherit}
             <span style="font-size: 13px">3,133.50</span>
           </div>
         </div>
-        <p style="margin: 0; font-size: 13px; color: #B8C4C0">Figures are sample data from the demo app, not real collections.</p>
+        <p style="margin: 0; font-size: 14px; color: #B8C4C0">Figures are sample data from the demo app, not real collections.</p>
       </div>
     </div>
   </section>
 
-  <section id="contact" style="background: #FFFFFF; padding: 88px 24px">
+  <section id="contact" class="sec" style="background: #FFFFFF; padding: 88px 24px">
     <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 56px">
       <div style="flex: 1 1 360px; display: flex; flex-direction: column; gap: 14px">
         <h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: clamp(32px, 4vw, 48px); line-height: 1.1; letter-spacing: -1px">Join the pilot</h2>
@@ -256,7 +286,7 @@ input,select,textarea{font:inherit}
         <p style="margin: 0; font-size: 16px">Email: <a href="mailto:[YOUR EMAIL]">[YOUR EMAIL]</a></p>
         <p style="margin: 0; font-size: 16px">Phone / WhatsApp: [YOUR NUMBER]</p>
       </div>
-      <form style="flex: 999 1 480px; min-width: 0; border-radius: 24px; background: #F6F5F1; border: 1px solid #D9D6CE; padding: 28px; display: flex; flex-direction: column; gap: 16px">
+      <form style="flex: 999 1 480px; min-width: 0; border-radius: 24px; background: #F6F5F1; border: 1px solid #D9D6CE; padding: 22px; display: flex; flex-direction: column; gap: 16px">
         <label style="display: flex; flex-direction: column; gap: 6px; font-size: 15px; font-weight: 600">Name
           <input type="text" name="name" style="height: 48px; border: 1px solid #C9C5BB; border-radius: 12px; padding: 0 14px; font-weight: 400; background: #FFFFFF">
         </label>
@@ -288,15 +318,16 @@ input,select,textarea{font:inherit}
         <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 20px">rakkenni</span>
         <span dir="rtl" style="font-family: Cairo, sans-serif; font-weight: 800; font-size: 20px; color: #F2A541">ركّني</span>
       </div>
-      <nav aria-label="Footer" style="display: flex; flex-wrap: wrap; gap: 20px; font-size: 14px">
-        <a href="#ways" style="color: #FFFFFF">How it works</a>
-        <a href="#owners" style="color: #FFFFFF">For owners</a>
-        <a href="#cities" style="color: #FFFFFF">For cities</a>
-        <a href="https://parkapp-egypt.expo.app" style="color: #FFFFFF">Demo app</a>
+      <nav aria-label="Footer" style="display: flex; flex-wrap: wrap; column-gap: 20px; font-size: 15px">
+        <a href="#ways" style="color: #FFFFFF; display: inline-block; padding: 10px 0">How it works</a>
+        <a href="#owners" style="color: #FFFFFF; display: inline-block; padding: 10px 0">For owners</a>
+        <a href="#cities" style="color: #FFFFFF; display: inline-block; padding: 10px 0">For cities</a>
+        <a href="https://parkapp-egypt.expo.app" style="color: #FFFFFF; display: inline-block; padding: 10px 0">Demo app</a>
       </nav>
       <p style="margin: 0; font-size: 14px; color: #B8C4C0">© 2026 Rakkenni. Cairo, Egypt.</p>
     </div>
   </footer>
 </div>
+<script>document.querySelectorAll(".mnav a").forEach(function(a){a.addEventListener("click",function(){a.closest("details").removeAttribute("open")})});document.addEventListener("click",function(e){var d=document.querySelector(".mnav");if(d&&d.open&&!d.contains(e.target))d.removeAttribute("open")});</script>
 </body>
 </html>
